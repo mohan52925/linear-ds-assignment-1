@@ -1,0 +1,19 @@
+// Read about the Tower of Hanoi algorithm. Write a program to implement it.
+
+function towerOfHanoi(n, from_rod, to_rod, aux_rod)
+{
+		if (n == 0)
+		{
+            // console.log(n)
+			return;
+		}else{
+		towerOfHanoi(n - 1, from_rod, aux_rod, to_rod)
+		console.log("Move disk " + n + " from rod " + from_rod +
+		" to rod " + to_rod);
+		towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
+        }
+	}
+	let N = 3;
+	towerOfHanoi(N, 'A', 'C', 'B');
+
+
